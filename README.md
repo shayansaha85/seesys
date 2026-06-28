@@ -1,4 +1,9 @@
+<div align="center">
+<img src="docs/seesys_logo.png" width=120>
+
 # seesys
+
+</div>
 
 A terminal-based real-time infrastructure monitor written in Python using `rich` and `psutil`.
 
@@ -6,6 +11,9 @@ A terminal-based real-time infrastructure monitor written in Python using `rich`
 - Real-time CPU, Memory, Disk, and Network monitoring
 - Process list and sensor details
 - Fully terminal-based UI with beautiful layouts
+
+## Screenshot
+![screenshot](docs/snapshot.png)
 
 ## Installation
 
