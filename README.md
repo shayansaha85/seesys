@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/seesys_logo.png" width=120>
+<img src="docs/logo.png" width=120>
 
 # seesys
 ```A terminal-based real-time infrastructure monitor written in Python using `rich` and `psutil`.```
