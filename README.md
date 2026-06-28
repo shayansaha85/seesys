@@ -1,4 +1,4 @@
-# SeeSys (Linux Infrastructure Monitor)
+# seesys (Infrastructure Monitor)
 
 A terminal-based real-time infrastructure monitor written in Python using `rich` and `psutil`.
 
