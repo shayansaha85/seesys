@@ -1,11 +1,12 @@
 <div align="center">
+
 <img src="docs/seesys_logo.png" width=120>
 
 # seesys
-
+```A terminal-based real-time infrastructure monitor written in Python using `rich` and `psutil`.```
 </div>
 
-A terminal-based real-time infrastructure monitor written in Python using `rich` and `psutil`.
+
 
 ## Features
 - Real-time CPU, Memory, Disk, and Network monitoring
