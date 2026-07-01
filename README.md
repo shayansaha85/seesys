@@ -7,7 +7,6 @@
 </div>
 
 
-
 ## Features (version v1.0.2)
 - GPU Monitoring (NVIDIA)
 - Historical ASCII Line Graphs for CPU & Memory 

@@ -7,14 +7,10 @@ from utils.cache import sys_cache
 def generate_cpu_graph_panel():
     data = list(sys_cache.cpu_history)
     if not data or all(v == 0.0 for v in data):
-        # asciichartpy needs at least some variation or handles all-zeros poorly sometimes,
-        # but latest versions handle it okay.
         pass
         
     try:
         chart = asciichartpy.plot(data, {'height': 6, 'min': 0, 'max': 100})
-        # asciichartpy outputs ANSI codes by default? No, it outputs plain text.
-        # We can colorize it with rich Text
         text = Text(chart, style="bold green")
     except Exception as e:
         text = Text(f"Graph Error: {e}", style="red")
