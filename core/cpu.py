@@ -15,9 +15,9 @@ def generate_cpu_panel():
     table.add_row("Cores (Phy/Log)", f"{sys_cache.cores_phy} / {sys_cache.cores_log}")
     table.add_row("Frequency", freq_str)
     
-    cpu_percent = psutil.cpu_percent(interval=None)
+    cpu_percent = sys_cache.cpu_history[-1] if sys_cache.cpu_history else 0.0
     color = "green" if cpu_percent < 60 else "yellow" if cpu_percent < 85 else "red"
-    table.add_row("Overall Usage", f"[{color}]{cpu_percent}%[/{color}]")
+    table.add_row("Overall Usage", f"[{color}]{cpu_percent:.1f}%[/{color}]")
 
     per_cpu = psutil.cpu_percent(interval=None, percpu=True)
     per_cpu_strs = []

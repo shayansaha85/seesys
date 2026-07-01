@@ -1,2 +1,4 @@
 psutil==5.9.8
 rich==13.7.1
+asciichartpy>=1.5.25
+nvidia-ml-py>=12.535.133

@@ -8,13 +8,21 @@
 
 
 
-## Features
-- Real-time CPU, Memory, Disk, and Network monitoring
+## Features (version v1.0.2)
+- GPU Monitoring (NVIDIA)
+- Historical ASCII Line Graphs for CPU & Memory 
+- And **v1.0.1 features**
+
+## Features (version v1.0.1)
 - Process list and sensor details
+- And **v1.0.0 features**
+
+## Features (version v1.0.0)
+- Real-time CPU, Memory, Disk, and Network monitoring
 - Fully terminal-based UI with beautiful layouts
 
 ## Screenshot
-![screenshot](docs/snapshot.png)
+![screenshot](docs/snapshot_v2.png)
 
 ## Installation
 

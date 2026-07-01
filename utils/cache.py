@@ -2,6 +2,7 @@ import time
 import platform
 import psutil
 from datetime import datetime
+from collections import deque
 
 class SystemCache:
     def __init__(self):
@@ -18,6 +19,15 @@ class SystemCache:
         self.mem_total = psutil.virtual_memory().total
         self.swap_total = psutil.swap_memory().total
         
+        # History for sparklines (60 ticks)
+        self.cpu_history = deque([0.0] * 40, maxlen=40)
+        self.mem_history = deque([0.0] * 40, maxlen=40)
+        
+        # Interactive state
+        self.process_sort_by = 'cpu_percent'
+        self.process_selected_idx = 0
+        self.kill_msg = ""
+        
         # Static partitions
         self.partitions = []
         try:
@@ -30,6 +40,12 @@ class SystemCache:
         try:
             self.last_net_io = psutil.net_io_counters(pernic=True)
             self.last_disk_io = psutil.disk_io_counters()
+        except Exception:
+            pass
+            
+        try:
+            self.cpu_history.append(psutil.cpu_percent(interval=None))
+            self.mem_history.append(psutil.virtual_memory().percent)
         except Exception:
             pass
 
